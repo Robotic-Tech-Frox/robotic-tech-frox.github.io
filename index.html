@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate" data-theme="dark" data-language="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotic Tech Frox — FIRST® Tech Challenge</title>
+  <meta name="description" content="Robotic Tech Frox is a FIRST Tech Challenge team from Germany. Robots, competition results and the people behind them.">
+  <meta name="theme-color" content="#0e0e11">
+  <meta name="google" content="notranslate">
+  <link rel="icon" href="frox_head.svg?v=2" type="image/svg+xml">
+  <link rel="canonical" href="https://robotictechfrox.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Robotic Tech Frox — FIRST® Tech Challenge">
+  <meta property="og:description" content="FIRST Tech Challenge team from Germany. Robots, results, and the people behind them.">
+  <meta property="og:image" content="https://robotictechfrox.github.io/og-image.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      var t = null, l = null;
+      try { t = localStorage.getItem("rtf-theme"); } catch (e) {}
+      try { l = localStorage.getItem("rtf-language"); } catch (e) {}
+      d.dataset.theme = t === "light" ? "light" : "dark";
+      if (l !== "en" && l !== "de") l = "en";
+      d.dataset.language = l;
+      d.setAttribute("lang", l);
+    })();
+  </script>
+</head>
+<body id="top">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span>Robotic Tech Frox</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#team" data-i18n="nav_team">Team</a>
+        <a href="#results" data-i18n="nav_results">Results</a>
+        <a href="#seasons" data-i18n="nav_seasons">Seasons</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        </div>
+
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_eyebrow">FIRST® Tech Challenge · Germany</p>
+          <h1 data-i18n="hero_title">Robotic<br>Tech <span class="accent">Frox</span><img class="hero-frox" src="frox_head.svg?v=2" alt="" aria-hidden="true" width="388" height="398" onerror="this.hidden=true"></h1>
+          <p class="hero-sub" data-i18n="hero_sub">We are Robotic Tech Frox — a FIRST® Tech Challenge team from Germany — and <b>2× German Champion</b>.</p>
+
+          <div class="hero-facts">
+            <div class="fact">
+              <div class="value" data-rtf-best-rank>—</div>
+              <div class="label" data-i18n="fact_best_rank">Best OPR world rank all-time · Season <span class="season" data-rtf-best-rank-season>—</span></div>
+            </div>
+            <div class="fact">
+              <div class="value" data-rtf-current-rank>—</div>
+              <div class="label" data-i18n="fact_current_rank">Current ranking · <span class="season" data-rtf-current-rank-season>2026</span> season</div>
+            </div>
+            <div class="fact">
+              <div class="value" data-rtf-winrate>—</div>
+              <div class="label" data-i18n="fact_winrate">Latest match win rate</div>
+            </div>
+            <div class="fact">
+              <div class="value">8</div>
+              <div class="label" data-i18n="fact_awards">Awards · Decode</div>
+            </div>
+            <div class="fact">
+              <div class="value">2</div>
+              <div class="label" data-i18n="fact_inspires">Inspires · Decode</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-stage-wrap">
+          <!-- 3D hero. Drop the Onshape GLB export at assets/models/bot.glb and it
+               replaces the placeholder automatically. To render any Onshape link
+               live, deploy onshape/worker.js and set data-onshape-proxy to its URL.
+               See onshape/README.md. -->
+          <div class="stage" id="robot3d" data-model="assets/models/bot.glb" data-onshape-proxy="" aria-label="Interactive 3D model of our robot">
+            <div class="stage-fallback" aria-hidden="true">
+              <svg viewBox="0 0 260 220" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="60" y="120" width="140" height="34" rx="6"/>
+                <path d="M200 128h18v18h-18"/>
+                <circle cx="88" cy="176" r="20"/><circle cx="88" cy="176" r="8"/>
+                <circle cx="176" cy="176" r="20"/><circle cx="176" cy="176" r="8"/>
+                <path d="M110 120V54M154 120V54"/>
+                <rect x="100" y="72" width="64" height="20" rx="4"/>
+                <circle cx="212" cy="146" r="12"/>
+                <rect x="134" y="30" width="28" height="18" rx="4"/><path d="M148 30v-8"/>
+              </svg>
+            </div>
+            <div class="stage-loader is-indeterminate" data-rtf-loader role="status" aria-live="polite">
+              <span class="stage-loader-ring" aria-hidden="true"></span>
+              <span class="stage-loader-text">Loading robot…</span>
+              <span class="stage-loader-bar" aria-hidden="true"><i></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATCH STATISTICS (live from FTCScout) -->
+    <section class="section" id="numbers">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="numbers_title">Match statistics</h2>
+          </div>
+          <a class="section-link" href="https://ftcscout.org/teams/37548" target="_blank" rel="noopener" data-i18n="numbers_link">FTCScout profile ↗</a>
+        </div>
+
+        <div class="stat-cards" data-rtf-stat-cards>
+          <div class="stat-card" data-rtf-stats="2026">
+            <header>
+              <h3 data-rtf-stats-title data-i18n="stat_2026_title">Season 2026</h3>
+              <span class="team-line" data-rtf-stats-team>Team #37548 · FTCScout</span>
+            </header>
+            <div class="stat-grid">
+              <div class="stat">
+                <span class="label" data-i18n="stat_total">Total NP</span>
+                <span class="value" data-stat="tot">—</span>
+                <span class="rank" data-stat-rank="tot">—</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_auto">Auto</span>
+                <span class="value" data-stat="auto">—</span>
+                <span class="rank" data-stat-rank="auto">—</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_teleop">Teleop</span>
+                <span class="value" data-stat="dc">—</span>
+                <span class="rank" data-stat-rank="dc">—</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_endgame">Endgame</span>
+                <span class="value" data-stat="eg">—</span>
+                <span class="rank" data-stat-rank="eg">—</span>
+              </div>
+            </div>
+            <p class="stat-foot">
+              <span data-rtf-stats-note data-i18n="stat_2026_note">From 2026 we compete as team #37548</span>
+              <a data-rtf-stats-link href="https://ftcscout.org/teams/37548?season=2026" target="_blank" rel="noopener">Open on FTCScout ↗</a>
+            </p>
+          </div>
+
+          <div class="stat-card" data-rtf-stats="2025">
+            <header>
+              <h3 data-rtf-stats-title data-i18n="stat_2025_title">Season 2025 · Decode</h3>
+              <span class="team-line" data-rtf-stats-team>Team #20092 · FTCScout</span>
+            </header>
+            <div class="stat-head">
+              <div class="opr-number" data-rtf-opr-number>—</div>
+              <div class="rank-badge" data-rtf-rank-badge><b>#</b><span data-rtf-rank-percent>—</span></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat">
+                <span class="label" data-i18n="stat_auto">Auto</span>
+                <span class="value" data-stat="auto">—</span>
+                <span class="rank" data-stat-rank="auto">—</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_teleop">Teleop</span>
+                <span class="value" data-stat="dc">—</span>
+                <span class="rank" data-stat-rank="dc">—</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_endgame">Endgame</span>
+                <span class="value" data-stat="eg">—</span>
+                <span class="rank" data-stat-rank="eg">—</span>
+              </div>
+            </div>
+            <p class="stat-foot">
+              <span class="best-season" data-rtf-best-note></span>
+              <a data-rtf-stats-link href="https://ftcscout.org/teams/20092?season=2025" target="_blank" rel="noopener">Open on FTCScout ↗</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="team-title">
+              <button class="team-toggle" id="teamToggle" type="button" aria-expanded="true" aria-controls="teamStage">
+                <span class="team-toggle-label">The Teammates</span>
+                <span class="team-toggle-icon" aria-hidden="true">
+                  <svg class="team-icon team-icon-grid" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <rect x="2.75" y="2.75" width="5.5" height="5.5" rx="1.3"/>
+                    <rect x="11.75" y="2.75" width="5.5" height="5.5" rx="1.3"/>
+                    <rect x="2.75" y="11.75" width="5.5" height="5.5" rx="1.3"/>
+                    <rect x="11.75" y="11.75" width="5.5" height="5.5" rx="1.3"/>
+                  </svg>
+                  <svg class="team-icon team-icon-photo" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                    <circle cx="7" cy="7" r="2.5"/>
+                    <path d="M2.75 16c0-2.8 1.9-4.8 4.25-4.8s4.25 2 4.25 4.8"/>
+                    <circle cx="14" cy="6.8" r="2"/>
+                    <path d="M11.6 12.7c.65-.8 1.55-1.3 2.65-1.3 1.8 0 3.25 1.45 3.25 3.25V16"/>
+                  </svg>
+                </span>
+              </button>
+            </h2>
+          </div>
+        </div>
+
+        <div class="team-stage" id="teamStage">
+          <div class="team-grid" id="teamGrid">
+          <article class="member">
+            <span class="role-badge coach" title="Coach, station A"><span class="badge-icon"></span><b>A</b></span>
+            <div class="avatar" aria-hidden="true">C</div>
+            <span class="name">Catalina</span>
+            <p class="role" data-i18n="m1_role">Hardware Lead</p>
+          </article>
+
+          <article class="member">
+            <span class="role-badge driver" title="Driver, station A"><span class="badge-icon"></span><b>A</b></span>
+            <div class="avatar" aria-hidden="true">K</div>
+            <span class="name">Kadir</span>
+            <p class="role" data-i18n="m2_role">Software Lead</p>
+          </article>
+
+          <article class="member">
+            <div class="avatar" aria-hidden="true">A</div>
+            <span class="name">Aris</span>
+            <p class="role" data-i18n="m5_role">Outreach Lead</p>
+          </article>
+
+          <article class="member">
+            <span class="role-badge coach" title="Coach, station B"><span class="badge-icon"></span><b>B</b></span>
+            <div class="avatar" aria-hidden="true">M</div>
+            <span class="name">Matteo</span>
+            <p class="role" data-i18n="m4_role">Hardware</p>
+          </article>
+
+          <article class="member">
+            <span class="role-badge driver" title="Driver, station B"><span class="badge-icon"></span><b>B</b></span>
+            <div class="avatar" aria-hidden="true">K</div>
+            <span class="name">Kilian</span>
+            <p class="role" data-i18n="m3_role">Software</p>
+          </article>
+
+          <article class="member">
+            <div class="avatar" aria-hidden="true">S</div>
+            <span class="name">Sophia</span>
+            <p class="role" data-i18n="m6_role">Outreach</p>
+          </article>
+          </div>
+
+          <div class="team-blob" id="teamPhoto" aria-hidden="true">
+            <!-- Team photo placeholder. Replace the inner placeholder with
+                 <img class="team-photo-img" src="assets/team-photo.jpg" alt="The Robotic Tech Frox team">. -->
+            <div class="team-photo-placeholder" role="img" aria-label="Placeholder for the Robotic Tech Frox team photo">
+              <svg class="team-photo-people" viewBox="0 0 480 220" fill="currentColor" aria-hidden="true" focusable="false">
+                <g>
+                  <circle cx="92" cy="82" r="23"/>
+                  <path d="M42 220c0-43 22-73 50-73s50 30 50 73z"/>
+                  <circle cx="201" cy="64" r="27"/>
+                  <path d="M145 220c0-50 25-84 56-84s56 34 56 84z"/>
+                  <circle cx="311" cy="80" r="24"/>
+                  <path d="M260 220c0-44 23-75 51-75s51 31 51 75z"/>
+                  <circle cx="413" cy="96" r="20"/>
+                  <path d="M370 220c0-37 19-63 43-63s43 26 43 63z"/>
+                </g>
+                <g class="team-photo-accent">
+                  <circle cx="201" cy="64" r="27"/>
+                  <path d="M145 220c0-50 25-84 56-84s56 34 56 84z"/>
+                </g>
+              </svg>
+              <div class="team-photo-copy">
+                <span class="team-photo-kicker">Robotic Tech Frox</span>
+                <strong>Team photo</strong>
+                <span class="team-photo-note">Placeholder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="results_title">Results</h2>
+          </div>
+          <a class="section-link" href="#seasons" data-i18n="results_link">All season stats →</a>
+        </div>
+
+        <div class="season-rail">
+          <!-- 2025 · Decode -->
+          <article class="season-block" data-current="true">
+            <div class="season-mark">
+              <div class="season-year">2025</div>
+              <span class="game-chip">Decode</span>
+              <p class="win-rate"><b data-rtf-winrate-live>—</b> <span data-i18n="win_rate">match win rate</span></p>
+            </div>
+            <ul class="event-list">
+              <li class="event">
+                <div class="event-name">Canada Cup Premier Event <span class="place">· Toronto</span></div>
+                <div class="chips">
+                  <span class="chip win"><span class="medal"></span><span data-i18n="chip_highscore">Event high score</span></span>
+                  <span class="chip win"><span class="medal"></span><span data-i18n="chip_captain3">Captain · 3rd alliance</span></span>
+                </div>
+              </li>
+              <li class="event">
+                <div class="event-name" data-i18n="ev_gc">German Championship</div>
+              </li>
+              <li class="event">
+                <div class="event-name">BeNeLux Qualifier <span class="place">· Den Haag</span></div>
+              </li>
+              <li class="event">
+                <div class="event-name">BeNeLux Championship</div>
+              </li>
+              <li class="event">
+                <div class="event-name">Scrimmage <span class="place">· Oberkochen</span></div>
+                <div class="chips">
+                  <span class="chip win"><span class="medal"></span><span data-i18n="chip_first">1st place</span></span>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 2024 · Into the Deep -->
+          <article class="season-block">
+            <div class="season-mark">
+              <div class="season-year">2024</div>
+              <span class="game-chip">Into the Deep</span>
+            </div>
+            <ul class="event-list">
+              <li class="event">
+                <div class="event-name" data-i18n="ev_worlds">FIRST World Championship <span class="place">· Houston</span></div>
+                <div class="chips">
+                  <span class="chip win"><span class="medal"></span><span data-i18n="chip_worlds">Worlds 2025</span></span>
+                </div>
+              </li>
+              <li class="event">
+                <div class="event-name">Italy Championship</div>
+              </li>
+              <li class="event">
+                <div class="event-name">FTC Deutschland-Wettbewerb <span class="place">· Oberkochen</span></div>
+              </li>
+              <li class="event">
+                <div class="event-name">NL Qualifier <span class="place">· Den Haag</span></div>
+              </li>
+              <li class="event">
+                <div class="event-name">Stuttgart Unofficial</div>
+                <div class="chips">
+                  <span class="chip win"><span class="medal"></span><span data-i18n="chip_first">1st place</span></span>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 2023 · Center Stage -->
+          <article class="season-block">
+            <div class="season-mark">
+              <div class="season-year">2023</div>
+              <span class="game-chip">Center Stage</span>
+            </div>
+            <ul class="event-list">
+              <li class="event">
+                <div class="event-name">France Championship <span class="place">· Lyon</span></div>
+              </li>
+              <li class="event">
+                <div class="event-name">Stuttgart Unofficial</div>
+              </li>
+              <li class="event">
+                <div class="event-name">BeNeLux Championship <span class="place">· Breda</span></div>
+              </li>
+              <li class="event">
+                <div class="event-name">BeNeLux League</div>
+                <div class="chips">
+                  <span class="chip win"><span class="medal"></span><span data-i18n="chip_rank9">Rank 9</span></span>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 2022 · Power Play -->
+          <article class="season-block">
+            <div class="season-mark">
+              <div class="season-year">2022</div>
+              <span class="game-chip">Power Play</span>
+            </div>
+            <ul class="event-list">
+              <li class="event">
+                <div class="event-name">Lyon <span class="place">· France</span></div>
+              </li>
+              <li class="event">
+                <div class="event-name">Oberkochen Unofficial</div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEASONS -->
+    <section class="section" id="seasons">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="seasons_title">Seasons</h2>
+          </div>
+          <a class="section-link" href="#results" data-i18n="seasons_link">Results &amp; awards →</a>
+        </div>
+
+        <div class="seasons-list">
+          <!-- 2026 · current season, team #37548 -->
+          <article class="season-card" data-rtf-stats="2026">
+            <header>
+              <h2 data-rtf-stats-title data-i18n="s2026_title">Season 2026</h2>
+              <div class="season-meta">
+                <span data-rtf-stats-team>Team #37548 · FTCScout</span>
+                <a data-rtf-stats-link href="https://ftcscout.org/teams/37548?season=2026" target="_blank" rel="noopener">FTCScout ↗</a>
+              </div>
+            </header>
+            <div class="stat-grid">
+              <div class="stat">
+                <span class="label" data-i18n="stat_total">Total NP</span>
+                <span class="value" data-stat="tot">—</span>
+                <span class="rank" data-stat-rank="tot">—</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_auto">Auto</span>
+                <span class="value" data-stat="auto">—</span>
+                <span class="rank" data-stat-rank="auto">—</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_teleop">Teleop</span>
+                <span class="value" data-stat="dc">—</span>
+                <span class="rank" data-stat-rank="dc">—</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_endgame">Endgame</span>
+                <span class="value" data-stat="eg">—</span>
+                <span class="rank" data-stat-rank="eg">—</span>
+              </div>
+            </div>
+            <p class="stat-foot">
+              <span data-rtf-stats-note data-i18n="s2026_note">Our first events under the new number are upcoming</span>
+            </p>
+          </article>
+
+          <!-- 2025 · Decode -->
+          <article class="season-card" data-rtf-stats="2025">
+            <header>
+              <h2 data-rtf-stats-title data-i18n="s2025_title">Season 2025 · Decode</h2>
+              <div class="season-meta">
+                <span data-rtf-stats-team>Team #20092 · FTCScout</span>
+                <a data-rtf-stats-link href="https://ftcscout.org/teams/20092?season=2025" target="_blank" rel="noopener">FTCScout ↗</a>
+              </div>
+            </header>
+            <div class="stat-head">
+              <div class="opr-number" data-rtf-opr-number>134.72</div>
+              <div class="rank-badge" data-rtf-rank-badge><b>#</b><span data-rtf-rank-percent>276 / 3.3%</span></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat">
+                <span class="label" data-i18n="stat_total">Total NP</span>
+                <span class="value" data-stat="tot">134.72</span>
+                <span class="rank" data-stat-rank="tot">#276 / 3.3%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_auto">Auto</span>
+                <span class="value" data-stat="auto">40.27</span>
+                <span class="rank" data-stat-rank="auto">#229 / 2.7%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_teleop">Teleop</span>
+                <span class="value" data-stat="dc">95.44</span>
+                <span class="rank" data-stat-rank="dc">#332 / 4.0%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_endgame">Endgame</span>
+                <span class="value" data-stat="eg">10.32</span>
+                <span class="rank" data-stat-rank="eg">#1,170 / 14.0%</span>
+              </div>
+            </div>
+            <p class="stat-foot">
+              <span class="best-season" data-rtf-best-note></span>
+              <a data-rtf-stats-link href="https://ftcscout.org/teams/20092?season=2025" target="_blank" rel="noopener">Open on FTCScout ↗</a>
+            </p>
+          </article>
+
+          <!-- 2024 · Into the Deep -->
+          <article class="season-card" data-rtf-stats="2024">
+            <header>
+              <h2 data-rtf-stats-title data-i18n="s2024_title">Season 2024 · Into the Deep</h2>
+              <div class="season-meta">
+                <span data-rtf-stats-team>Team #20092 · FTCScout</span>
+                <a data-rtf-stats-link href="https://ftcscout.org/teams/20092?season=2024" target="_blank" rel="noopener">FTCScout ↗</a>
+              </div>
+            </header>
+            <div class="stat-head">
+              <div class="opr-number" data-rtf-opr-number>147.06</div>
+              <div class="rank-badge" data-rtf-rank-badge><b>#</b><span data-rtf-rank-percent>354 / 4.6%</span></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat">
+                <span class="label" data-i18n="stat_total">Total NP</span>
+                <span class="value" data-stat="tot">147.06</span>
+                <span class="rank" data-stat-rank="tot">#354 / 4.6%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_auto">Auto</span>
+                <span class="value" data-stat="auto">33.86</span>
+                <span class="rank" data-stat-rank="auto">#376 / 4.9%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_teleop">Teleop</span>
+                <span class="value" data-stat="dc">117.70</span>
+                <span class="rank" data-stat-rank="dc">#325 / 4.3%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_endgame">Endgame</span>
+                <span class="value" data-stat="eg">17.89</span>
+                <span class="rank" data-stat-rank="eg">#488 / 6.4%</span>
+              </div>
+            </div>
+            <p class="stat-foot">
+              <span class="best-season" data-rtf-best-note></span>
+              <a data-rtf-stats-link href="https://ftcscout.org/teams/20092?season=2024" target="_blank" rel="noopener">Open on FTCScout ↗</a>
+            </p>
+          </article>
+
+          <!-- 2023 · Center Stage -->
+          <article class="season-card" data-rtf-stats="2023">
+            <header>
+              <h2 data-rtf-stats-title data-i18n="s2023_title">Season 2023 · Center Stage</h2>
+              <div class="season-meta">
+                <span data-rtf-stats-team>Team #20092 · FTCScout</span>
+                <a data-rtf-stats-link href="https://ftcscout.org/teams/20092?season=2023" target="_blank" rel="noopener">FTCScout ↗</a>
+              </div>
+            </header>
+            <div class="stat-head">
+              <div class="opr-number" data-rtf-opr-number>45.45</div>
+              <div class="rank-badge" data-rtf-rank-badge><b>#</b><span data-rtf-rank-percent>2,314 / 34.7%</span></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat">
+                <span class="label" data-i18n="stat_total">Total NP</span>
+                <span class="value" data-stat="tot">45.45</span>
+                <span class="rank" data-stat-rank="tot">#2,314 / 34.7%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_auto">Auto</span>
+                <span class="value" data-stat="auto">10.46</span>
+                <span class="rank" data-stat-rank="auto">#3,333 / 50.0%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_teleop">Teleop</span>
+                <span class="value" data-stat="dc">11.55</span>
+                <span class="rank" data-stat-rank="dc">#2,695 / 40.4%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_endgame">Endgame</span>
+                <span class="value" data-stat="eg">28.16</span>
+                <span class="rank" data-stat-rank="eg">#1,465 / 22.0%</span>
+              </div>
+            </div>
+            <p class="stat-foot">
+              <span class="best-season" data-rtf-best-note></span>
+              <a data-rtf-stats-link href="https://ftcscout.org/teams/20092?season=2023" target="_blank" rel="noopener">Open on FTCScout ↗</a>
+            </p>
+          </article>
+
+          <!-- 2022 · Power Play -->
+          <article class="season-card" data-rtf-stats="2022">
+            <header>
+              <h2 data-rtf-stats-title data-i18n="s2022_title">Season 2022 · Power Play</h2>
+              <div class="season-meta">
+                <span data-rtf-stats-team>Team #20092 · FTCScout</span>
+                <a data-rtf-stats-link href="https://ftcscout.org/teams/20092?season=2022" target="_blank" rel="noopener">FTCScout ↗</a>
+              </div>
+            </header>
+            <div class="stat-head">
+              <div class="opr-number" data-rtf-opr-number>14.78</div>
+              <div class="rank-badge" data-rtf-rank-badge><b>#</b><span data-rtf-rank-percent>4,717 / 83.2%</span></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat">
+                <span class="label" data-i18n="stat_total">Total NP</span>
+                <span class="value" data-stat="tot">14.78</span>
+                <span class="rank" data-stat-rank="tot">#4,717 / 83.2%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_auto">Auto</span>
+                <span class="value" data-stat="auto">1.70</span>
+                <span class="rank" data-stat-rank="auto">#4,843 / 85.4%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_teleop">Teleop</span>
+                <span class="value" data-stat="dc">8.37</span>
+                <span class="rank" data-stat-rank="dc">#4,539 / 80.0%</span>
+              </div>
+              <div class="stat">
+                <span class="label" data-i18n="stat_endgame">Endgame</span>
+                <span class="value" data-stat="eg">5.11</span>
+                <span class="rank" data-stat-rank="eg">#4,601 / 81.1%</span>
+              </div>
+            </div>
+            <p class="stat-foot">
+              <span class="best-season" data-rtf-best-note></span>
+              <a data-rtf-stats-link href="https://ftcscout.org/teams/20092?season=2022" target="_blank" rel="noopener">Open on FTCScout ↗</a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="about_title">Who we are</h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p data-i18n="about_body_1">We are <strong>Robotic Tech Frox</strong>, a FIRST® Tech Challenge team from Germany. From the very beginning, our mission has been to promote STEM values and inspire children to explore a passion for technology.</p>
+            <p data-i18n="about_body_2">We are dedicated to continuous growth, always seeking new knowledge, skills and perspectives to enhance our expertise. Beyond our own development, we share our projects and discoveries with the community — nurturing a culture of learning, collaboration and mutual support.</p>
+            <p data-i18n="about_body_3">We are 2× German Champion — and we keep going. By sharing knowledge, we aim to empower others, spark children's interest in STEM, and make a positive impact on our community and the wider world.</p>
+          </div>
+
+          <aside class="mission-card">
+            <h3 data-i18n="mission_title">Our mission</h3>
+            <p data-i18n="mission_body_1">Grow and excel in STEM and the FIRST® Tech Challenge by constantly improving our skills and knowledge — guided by Gracious Professionalism and Coopertition.</p>
+            <p data-i18n="mission_body_2">Every year we aim to do better than the last, learning and evolving together. We want every child — including students with disabilities — to have the chance to explore and enjoy STEAM education.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="contact_title">Get in touch</h2>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:robotictechfrox@gmail.com">
+            <span>
+              <span class="platform">Email</span>
+              <span class="handle">robotictechfrox@gmail.com</span>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-card" href="https://github.com/Robotic-Tech-Frox" target="_blank" rel="noopener">
+            <span>
+              <span class="platform">GitHub</span>
+              <span class="handle">Robotic-Tech-Frox</span>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-card" href="https://ftcscout.org/teams/37548" target="_blank" rel="noopener">
+            <span>
+              <span class="platform">FTCScout · since 2026</span>
+              <span class="handle">Team #37548</span>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-card" href="https://ftcscout.org/teams/20092" target="_blank" rel="noopener">
+            <span>
+              <span class="platform">FTCScout · 2022–2025</span>
+              <span class="handle">Team #20092</span>
+            </span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#top">
+        <img src="frox_head.svg?v=2" alt="" width="36" height="36" onerror="this.closest('.brand').classList.add('logo-failed')">
+        <span class="brand-fallback" aria-hidden="true">RTF</span>
+        <span>Robotic Tech Frox</span>
+      </a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#team" data-i18n="nav_team">Team</a>
+        <a href="#seasons" data-i18n="nav_seasons">Seasons</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="https://ftcscout.org/teams/37548" target="_blank" rel="noopener">FTCScout ↗</a>
+      </nav>
+      <p class="footer-note" data-i18n="footer_note">This website was made possible by Ralf Röber and amvara. FIRST® is a registered trademark of For Inspiration and Recognition of Science and Technology. © 2026 Robotic Tech Frox. All statistics pulled live from FTCScout (https://ftcscout.org).</p>
+    </div>
+  </footer>
+
+  <img class="frox-peek" src="frox-logo.svg" alt="" aria-hidden="true" width="630" height="885" decoding="async">
+  <script src="assets/index.js" defer></script>
+  <script src="assets/robot3d.js" defer></script>
+  <script>
+    (function () {
+      var d = document.documentElement;
+
+      /* theme */
+      var themeBtn = document.getElementById("themeBtn");
+      function setTheme(t) {
+        d.dataset.theme = t;
+        try { localStorage.setItem("rtf-theme", t); } catch (e) {}
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m) m.setAttribute("content", t === "light" ? "#f5f5f6" : "#0e0e11");
+      }
+      if (themeBtn) {
+        themeBtn.addEventListener("click", function () {
+          setTheme(d.dataset.theme === "light" ? "dark" : "light");
+        });
+      }
+
+      /* mobile menu */
+      var menuBtn = document.getElementById("menuBtn");
+      var nav = document.getElementById("nav");
+      if (menuBtn && nav) {
+        menuBtn.addEventListener("click", function () {
+          var open = nav.classList.toggle("open");
+          menuBtn.setAttribute("aria-expanded", String(open));
+        });
+        nav.addEventListener("click", function (e) {
+          if (e.target.closest("a")) nav.classList.remove("open");
+        });
+      }
+
+      /* language — bilingual strings */
+      var dict = {
+        en: {
+          hero_sub: "We are Robotic Tech Frox — a FIRST® Tech Challenge team from Germany — and <b>2× German Champion</b>.",
+          footer_note: "This website was made possible by Ralf Röber and amvara. FIRST® is a registered trademark of For Inspiration and Recognition of Science and Technology. © 2026 Robotic Tech Frox. All statistics pulled live from FTCScout (https://ftcscout.org)."
+        },
+        de: {}
+      };
+      var nodes = Array.prototype.slice.call(document.querySelectorAll("[data-i18n]"));
+      nodes.forEach(function (n) { n.__en = n.innerHTML; });
+
+      function setLang(lang) {
+        if (lang !== "de") lang = "en";
+        d.dataset.language = lang;
+        d.setAttribute("lang", lang);
+        try { localStorage.setItem("rtf-language", lang); } catch (e) {}
+        nodes.forEach(function (n) {
+          var v = (dict[lang] || {})[n.getAttribute("data-i18n")];
+          n.innerHTML = v == null ? n.__en : v;
+        });
+        Array.prototype.forEach.call(document.querySelectorAll(".lang button"), function (b) {
+          b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+        });
+        document.dispatchEvent(new Event("rtf:refresh"));
+      }
+
+      Array.prototype.forEach.call(document.querySelectorAll(".lang button"), function (b) {
+        b.addEventListener("click", function () { setLang(b.dataset.lang); });
+      });
+      setLang(d.dataset.language === "de" ? "de" : "en");
+    })();
+  </script>
+
+  <script>
+    /* Desktop scrolling: the Frox replaces the native bar, wheel movement is
+       damped instead of stepped, and the Frox trails/leans with velocity.
+       Keyboard, touch and anchor navigation keep native behaviour. */
+    (function () {
+      "use strict";
+
+      var peek = document.querySelector(".frox-peek");
+      if (!peek) return;
+
+      var root = document.documentElement;
+      var desktop = window.matchMedia("(min-width: 1280px) and (pointer: fine)");
+      var reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+      var size = 0;
+      var foxTop = null;
+      var foxVel = 0;
+      var foxRaf = 0;
+      var foxLast = 0;
+      var lastScroll = window.scrollY;
+      var scrollSpeed = 0;
+      var targetY = window.scrollY;
+      var smoothY = window.scrollY;
+      var scrollRaf = 0;
+      var scrollLast = 0;
+      var wheelScrolling = false;
+
+      function clamp(value, min, max) {
+        return Math.max(min, Math.min(max, value));
+      }
+
+      function pageMax() {
+        return Math.max(0, root.scrollHeight - window.innerHeight);
+      }
+
+      function measure() {
+        size = peek.offsetWidth;
+        targetY = clamp(targetY, 0, pageMax());
+        smoothY = clamp(smoothY, 0, pageMax());
+      }
+
+      function foxTarget() {
+        if (!size) return null;
+        var max = pageMax();
+        var progress = max > 0 ? clamp(window.scrollY / max, 0, 1) : 0;
+        var pad = 78;
+        var range = Math.max(0, window.innerHeight - pad * 2 - size);
+        return pad + size / 2 + range * progress;
+      }
+
+      function paintFox(top, lean, pull) {
+        peek.style.top = top + "px";
+        peek.style.setProperty("--fox-lean", lean.toFixed(2) + "deg");
+        peek.style.setProperty("--fox-pull", pull.toFixed(2) + "px");
+      }
+
+      function startFox() {
+        if (!size) return;
+        if (reduced.matches) {
+          var direct = foxTarget();
+          if (direct !== null) {
+            foxTop = direct;
+            foxVel = 0;
+            scrollSpeed = 0;
+            paintFox(direct, 0, 0);
+            lastScroll = window.scrollY;
+          }
+          return;
+        }
+        if (!foxRaf) {
+          foxLast = performance.now();
+          foxRaf = requestAnimationFrame(foxFrame);
+        }
+      }
+
+      function foxFrame(now) {
+        foxRaf = 0;
+        var dt = clamp((now - foxLast) / 1000, 0.001, 0.05);
+        foxLast = now;
+        var target = foxTarget();
+        if (target === null) return;
+        if (foxTop === null) foxTop = target;
+
+        foxVel += ((target - foxTop) * 120 - foxVel * 20) * dt;
+        foxTop += foxVel * dt;
+
+        var pad = 78;
+        var minTop = pad + size / 2;
+        var maxTop = Math.max(minTop, window.innerHeight - pad - size / 2);
+        if (foxTop < minTop) {
+          foxTop = minTop;
+          foxVel *= -0.24;
+        } else if (foxTop > maxTop) {
+          foxTop = maxTop;
+          foxVel *= -0.24;
+        }
+
+        var y = window.scrollY;
+        var velocity = (y - lastScroll) / dt;
+        lastScroll = y;
+        scrollSpeed += (velocity - scrollSpeed) * Math.min(1, dt * 12);
+        var lean = clamp(scrollSpeed * 0.012, -7, 7);
+        var pull = -Math.min(18, Math.abs(scrollSpeed) * 0.012);
+        paintFox(foxTop, lean, pull);
+
+        if (Math.abs(target - foxTop) < 0.2 &&
+            Math.abs(foxVel) < 0.5 &&
+            Math.abs(scrollSpeed) < 8) {
+          foxTop = target;
+          foxVel = 0;
+          scrollSpeed = 0;
+          paintFox(target, 0, 0);
+        } else {
+          foxRaf = requestAnimationFrame(foxFrame);
+        }
+      }
+
+      function stopScroll() {
+        if (scrollRaf) {
+          cancelAnimationFrame(scrollRaf);
+          scrollRaf = 0;
+        }
+        wheelScrolling = false;
+        smoothY = targetY = window.scrollY;
+      }
+
+      function stepScroll(now) {
+        scrollRaf = 0;
+        var dt = clamp((now - scrollLast) / 1000, 0.001, 0.05);
+        scrollLast = now;
+        var max = pageMax();
+        targetY = clamp(targetY, 0, max);
+        var remaining = targetY - smoothY;
+        if (Math.abs(remaining) < 0.35) {
+          smoothY = targetY;
+          wheelScrolling = false;
+          window.scrollTo({ top: smoothY, left: 0, behavior: "instant" });
+          startFox();
+          return;
+        }
+        var ease = 1 - Math.exp(-dt * (7 + Math.min(9, Math.abs(remaining) / 180)));
+        smoothY = clamp(smoothY + remaining * ease, 0, max);
+        window.scrollTo({ top: smoothY, left: 0, behavior: "instant" });
+        startFox();
+        scrollRaf = requestAnimationFrame(stepScroll);
+      }
+
+      function startScroll() {
+        if (scrollRaf) return;
+        wheelScrolling = true;
+        scrollLast = performance.now();
+        scrollRaf = requestAnimationFrame(stepScroll);
+      }
+
+      function onWheel(event) {
+        if (!desktop.matches || reduced.matches) return;
+        if (event.ctrlKey || event.metaKey || event.shiftKey) return;
+        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+        var target = event.target;
+        if (target && target.closest && target.closest("textarea, select, input, [data-native-scroll]")) return;
+
+        event.preventDefault();
+        if (!scrollRaf) {
+          smoothY = targetY = window.scrollY;
+        }
+        var delta = event.deltaY;
+        if (event.deltaMode === 1) delta *= 18;
+        else if (event.deltaMode === 2) delta *= window.innerHeight;
+        targetY = clamp(targetY + delta, 0, pageMax());
+        startScroll();
+      }
+
+      function onScroll() {
+        if (!wheelScrolling) {
+          targetY = smoothY = window.scrollY;
+          lastScroll = window.scrollY;
+        }
+        startFox();
+      }
+
+      function refresh() {
+        if (scrollRaf) {
+          cancelAnimationFrame(scrollRaf);
+          scrollRaf = 0;
+        }
+        wheelScrolling = false;
+        measure();
+        targetY = smoothY = window.scrollY;
+        var target = foxTarget();
+        if (target !== null) {
+          foxTop = target;
+          foxVel = 0;
+          scrollSpeed = 0;
+          paintFox(target, 0, 0);
+        }
+        lastScroll = window.scrollY;
+        root.classList.toggle("frox-scroll", desktop.matches);
+      }
+
+      window.addEventListener("wheel", onWheel, { passive: false });
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", refresh);
+      window.addEventListener("load", refresh);
+      document.addEventListener("rtf:refresh", refresh);
+      window.addEventListener("keydown", function (event) {
+        if (!desktop.matches) return;
+        var key = event.key;
+        if (key === "ArrowUp" || key === "ArrowDown" || key === "PageUp" ||
+            key === "PageDown" || key === "Home" || key === "End" || key === " " ||
+            key === "Spacebar") {
+          stopScroll();
+        }
+      });
+      document.addEventListener("click", function (event) {
+        if (event.target.closest && event.target.closest('a[href^="#"]')) stopScroll();
+      });
+      window.addEventListener("touchstart", stopScroll, { passive: true });
+      if (desktop.addEventListener) {
+        desktop.addEventListener("change", refresh);
+        reduced.addEventListener("change", refresh);
+      } else {
+        desktop.addListener(refresh);
+        reduced.addListener(refresh);
+      }
+
+      measure();
+      if (desktop.matches) root.classList.add("frox-scroll");
+      var initial = foxTarget();
+      if (initial !== null) {
+        foxTop = initial;
+        paintFox(initial, 0, 0);
+      }
+      lastScroll = window.scrollY;
+    })();
+  </script>
+
+  <script>
+    /* Team: merge the roster grid into one team-photo blob and back. */
+    (function () {
+      var toggle = document.getElementById("teamToggle");
+      var stage = document.getElementById("teamStage");
+      var grid = document.getElementById("teamGrid");
+      var blob = document.getElementById("teamPhoto");
+      if (!toggle || !stage || !grid || !blob) return;
+
+      var label = toggle.querySelector(".team-toggle-label");
+      var collapsed = false;
+      var animTimer = 0;
+
+      function measure() {
+        var h = collapsed ? blob.offsetHeight : grid.offsetHeight;
+        if (h > 0) stage.style.height = h + "px";
+      }
+
+      measure();
+      window.setTimeout(function () { stage.classList.add("is-ready"); }, 50);
+
+      function prepareMerge(targetHeight) {
+        var stageRect = stage.getBoundingClientRect();
+        var targetX = stageRect.width / 2;
+        var targetY = targetHeight / 2;
+        Array.prototype.forEach.call(grid.querySelectorAll(".member"), function (card, i) {
+          var r = card.getBoundingClientRect();
+          var x = r.left + r.width / 2 - stageRect.left;
+          var y = r.top + r.height / 2 - stageRect.top;
+          card.style.setProperty("--merge-x", (targetX - x).toFixed(1) + "px");
+          card.style.setProperty("--merge-y", (targetY - y).toFixed(1) + "px");
+          card.style.setProperty("--merge-rot", (i % 2 ? 7 : -7) + "deg");
+        });
+      }
+
+      function setState(next) {
+        collapsed = next;
+        window.clearTimeout(animTimer);
+        stage.classList.add("is-animating");
+
+        if (collapsed) {
+          var photoHeight = blob.offsetHeight;
+          prepareMerge(photoHeight);
+          stage.style.height = photoHeight + "px";
+          stage.classList.add("is-collapsed");
+          grid.setAttribute("aria-hidden", "true");
+          if ("inert" in grid) grid.inert = true;
+          blob.setAttribute("aria-hidden", "false");
+        } else {
+          stage.style.height = grid.offsetHeight + "px";
+          stage.classList.remove("is-collapsed");
+          grid.removeAttribute("aria-hidden");
+          if ("inert" in grid) grid.inert = false;
+          blob.setAttribute("aria-hidden", "true");
+        }
+
+        toggle.setAttribute("aria-expanded", String(!collapsed));
+        if (label) label.textContent = collapsed ? "The Team" : "The Teammates";
+
+        animTimer = window.setTimeout(function () {
+          stage.classList.remove("is-animating");
+          window.dispatchEvent(new Event("resize"));
+        }, 900);
+      }
+
+      toggle.addEventListener("click", function () { setState(!collapsed); });
+
+      if (typeof ResizeObserver === "function") {
+        var ro = new ResizeObserver(measure);
+        ro.observe(grid);
+        ro.observe(blob);
+      } else {
+        window.addEventListener("resize", measure);
+      }
+      window.addEventListener("load", measure);
+      document.addEventListener("rtf:refresh", measure);
+    })();
+  </script>
+</body>
+</html>

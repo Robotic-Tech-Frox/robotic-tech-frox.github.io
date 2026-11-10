@@ -1,0 +1,11 @@
+.idea/
+assets/models/*.source.glb
+assets/models/*.optimized.glb
+assets/models/*.joined.glb
+assets/models/*.raw.glb
+assets/models/*.final.glb
+assets/models/*.full.glb
+assets/models/*.body.*.glb
+assets/models/*.candidate.glb
+assets/models/*.merged.glb
+assets/models/*.log

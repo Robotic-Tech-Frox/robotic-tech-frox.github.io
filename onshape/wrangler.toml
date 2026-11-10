@@ -1,0 +1,11 @@
+name = "rtf-onshape-proxy"
+main = "worker.js"
+compatibility_date = "2026-11-10"
+
+# Keep this list to the site(s) that may call the proxy. The Onshape API key
+# lives in Worker secrets, never in this file or in the repo.
+[vars]
+ALLOWED_ORIGINS = "https://robotictechfrox.github.io"
+
+# Enterprise Onshape domain, if the document is not on cad.onshape.com:
+# ONSHAPE_HOSTS = "cad.example.onshape.com"
